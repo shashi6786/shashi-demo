@@ -6,6 +6,10 @@ pipeline {
 		stage('Build') {
 			steps {
 				echo "Build Stage"
+				withGradle {
+    				// some block
+    				clean build
+				}
 			}
 			
 		}
@@ -13,6 +17,10 @@ pipeline {
 		stage('Test') {
 			steps {
 				echo "Test Stage"
+				withGradle {
+    				// some block
+    				test
+				}
 			}
 		}
 		
