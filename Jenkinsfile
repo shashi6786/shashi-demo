@@ -28,6 +28,7 @@ pipeline {
 			steps {
 				echo "Deploy Stage"
 				sh './gradlew clean bootRun'
+				sh exit
 			}
 		}
 	}
