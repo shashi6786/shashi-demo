@@ -8,7 +8,7 @@ pipeline {
 				echo "Build Stage"
 				withGradle {
     				// some block
-    				gradle clean build
+    				sh  './gradlew clean build'
 				}
 			}
 			
@@ -19,7 +19,7 @@ pipeline {
 				echo "Test Stage"
 				withGradle {
     				// some block
-    				gradle clean test
+    				sh  './gradlew clean test'
 				}
 			}
 		}
@@ -27,6 +27,7 @@ pipeline {
 		stage('Deploy') {
 			steps {
 				echo "Deploy Stage"
+				sh './gradlew clean bootRun'
 			}
 		}
 	}
