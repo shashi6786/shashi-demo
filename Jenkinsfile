@@ -19,7 +19,7 @@ pipeline {
 				echo "Test Stage"
 				withGradle {
     				// some block
-    				test
+    				clean test
 				}
 			}
 		}
