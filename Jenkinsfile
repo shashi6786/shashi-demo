@@ -8,7 +8,7 @@ pipeline {
 				echo "Build Stage"
 				withGradle {
     				// some block
-    				clean build
+    				gradle clean build
 				}
 			}
 			
@@ -19,7 +19,7 @@ pipeline {
 				echo "Test Stage"
 				withGradle {
     				// some block
-    				clean test
+    				gradle clean test
 				}
 			}
 		}
